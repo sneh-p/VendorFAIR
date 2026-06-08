@@ -14,7 +14,7 @@ cd vendorfair
 python3.11 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env          # then set ORG_NAME and (optionally) an API key
+cp env.example .env          # then set ORG_NAME and (optionally) an API key
 streamlit run app.py
 ```
 
