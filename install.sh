@@ -147,7 +147,7 @@ setup_env() {
     warn ".env already exists -- leaving it untouched"
     return
   fi
-  cp "$APP_DIR/.env.example" "$APP_DIR/.env"
+  cp "$APP_DIR/env.example" "$APP_DIR/.env"
   local esc
   esc=$(printf '%s' "$ORG_NAME" | sed -e 's/[\\&|]/\\&/g')
   sed -i "s|^ORG_NAME=.*|ORG_NAME=$esc|" "$APP_DIR/.env" 2>/dev/null || echo "ORG_NAME=$ORG_NAME" >> "$APP_DIR/.env"
